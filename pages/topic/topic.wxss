@@ -38,7 +38,7 @@
   /* clear: both;  */
   width: 100%;
    /* border: 1px solid #ccc; */
-  border-radius: 12rpx;  
+  border-radius: 8rpx;  
   margin-bottom: 60rpx;
   background: #fff;
   box-shadow:2rpx 4rpx 40rpx #c2c2c2;

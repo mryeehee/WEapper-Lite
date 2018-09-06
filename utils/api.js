@@ -279,4 +279,5 @@ module.exports = {
       var url = 'https://' + domain + "/wp-content/plugins/wp-rest-api-for-app/qrcode/";
       return url;
   }
+
 };

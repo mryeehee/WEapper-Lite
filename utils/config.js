@@ -38,9 +38,9 @@ var DOWNLOADFILEDOMAIN = [
  //         'appid' 当redirecttype为miniapp时，这个值为其他微信小程序的appid，如果redirecttype为apppage，webpage时，这个值设置为空。
  //         'extraData'当redirecttype为miniapp时，这个值为提交到其他微信小程序的参数，如果redirecttype为apppage，webpage时，这个值设置为空。
 var INDEXNAV = [
-  { id: '1', name: '热门教程', image: '../../images/qddesign.svg', url: '../list/list?categoryID=4', redirecttype: 'apppage', appid: '', extraData:'' },
-  { id: '2', name: '随笔小记', image: '../../images/sbnote.svg', url: '../list/list?categoryID=1', redirecttype: 'apppage', appid: '', extraData:''},   
-  { id: '3', name: '热门排行', image: '../../images/ranking.svg', url: '../hot/hot', redirecttype: 'apppage', appid: '', extraData: '' },
+  { id: '1', name: '热门教程', image: '../../images/learn_line.svg', url: '../list/list?categoryID=4', redirecttype: 'apppage', appid: '', extraData:'' },
+  { id: '2', name: '随笔小记', image: '../../images/policy_fill.svg', url: '../list/list?categoryID=1', redirecttype: 'apppage', appid: '', extraData:''},   
+  { id: '3', name: '热门排行', image: '../../images/medal_fill.svg', url: '../hot/hot', redirecttype: 'apppage', appid: '', extraData: '' },
    ]
 
 export default {
