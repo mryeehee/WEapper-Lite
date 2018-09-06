@@ -12,6 +12,7 @@
 @import "../../utils/prism.wxss";
 @import "../../wxParse/wxParse.wxss";
 @import "../../templates/modal-view/modal-view.wxss";
+@import "../../app.wxss";
 
 .fd {
   position: relative;
@@ -29,13 +30,12 @@
 .icon-fd {
   position:fixed;
   width:100%;
-  height:98rpx;
-  bottom:140rpx;
-  left:2rpx;
-  right:2rpx;
+  height:100rpx;
+  bottom:0;
   background:#fff;
   z-index:999;
-  box-shadow:2rpx 4rpx 40rpx #e2e2e2; 
+  /*box-shadow:2rpx 4rpx 20rpx #ececec;*/
+  border-top: 2rpx solid #eee;
 }
 
 .thum-mask {
@@ -54,7 +54,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    opacity: 0.5;
+    opacity: 0.35;
     background: #191919;
 }
 
@@ -358,7 +358,7 @@
 .relatedPost {
   position: relative;
   text-align: left;
-  margin: 32rpx 0 60rpx;
+  margin: 32rpx 0 100rpx;
   /* border-bottom: 1px solid #eee; */
 }
 
@@ -368,9 +368,27 @@
   line-height: 40rpx;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
-  font-size: 32rpx;
-  color: #4c4c4c !important;
+  font-size: 34rpx;
+  color: #3b3b3b !important;
+  border-left:10rpx solid #ea5455;
+  padding-left: 20rpx;
 }
+
+/*.relatedTitle::before {
+  content: "||";
+  font-size: 16rpx;
+  font-weight: 900;
+  color: #ee5e7b;
+  vertical-align: 8rpx;
+}
+
+.relatedTitle::after {
+  content: "||";
+  font-size: 16rpx;
+  font-weight: 900;
+  color: #ee5e7b;
+  vertical-align: 8rpx;
+}*/
 
 .relatedText {
   text-align: left;
@@ -396,14 +414,14 @@
   height:60rpx;
   line-height:56rpx;
   border-radius:50rpx;
-  border:1px solid #2f89fc;
+  border:1px solid #EE5E7B;
   text-align:center;
   margin:0 35% 40rpx;
 }
 
 .likePost .likebtt text {
   font-size:26rpx;
-  color:#2f89fc;
+  color:#EE5E7B;
 }
 
 .likeTitle {
@@ -430,7 +448,7 @@
 }
 
 .likeText {
-  text-align: center;
+  text-align: left;
   font-weight: normal;
   font-size: 26rpx;
   line-height: 30rpx;
@@ -580,18 +598,17 @@
 
 .iconList {
   text-align: center;
-  border-top: 1px solid #eee;
 }
 
 .iconLine {
-  margin-top: 20rpx;
+  margin-top: 24rpx;
 }
 
 .iconLine text {
   font-size: 24rpx;
   text-align: center;
-  color: #959595;
-  margin-left: 8rpx;
+  color: #ee5e7b;
+  /*margin-left: 8rpx;*/
   vertical-align: 14rpx;
 }
 

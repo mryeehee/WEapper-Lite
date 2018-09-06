@@ -56,7 +56,7 @@ Page({
         isShow: false,//控制menubox是否显示
         isLoad: true,//解决menubox执行一次  
         menuBackgroup: false,
-        likeImag: "like.png",
+        likeImag: "approve.svg",
         likeList: [],
         likeCount: 0,
         displayLike: 'none',
@@ -79,6 +79,24 @@ Page({
         new ModalView;
 
     },
+
+  navigateBack: function () {
+    var self = this;
+    var pages = getCurrentPages();
+    if (pages.length == 1) {
+      if (self.data.detail.id && self.data.detail.id > 0) {
+        wx.redirectTo({
+          url: 'pages/detail/detail?id=' + this.data.detail.id
+        });
+      } else {
+        wx.switchTab({
+          url: "../index/index"
+        });
+      }
+    } else {
+      wx.navigateBack({ changed: true });//返回上一页
+    }
+  },
     showLikeImg: function () {
         var self = this;
         var flag = false;
@@ -218,7 +236,7 @@ Page({
 
                     }
                     self.setData({
-                        likeImag: "like-on.png"
+                      likeImag: "approve_after.svg"
                     });
                 })
         }
@@ -239,7 +257,7 @@ Page({
                 .then(response => {
                     if (response.data.status == '200') {
                         self.setData({
-                            likeImag: "like-on.png"
+                          likeImag: "approve_after.svg"
                         });
 
                         console.log("已赞过");
