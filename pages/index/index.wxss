@@ -118,7 +118,7 @@ swiper .swiper-desc {
   flex-direction: row;
   /* margin-top: 8px; */
   padding: 24rpx;
-  background: #2f89fc;
+  background: #EE5E7B;
 }
 
 .search-pancel image {
@@ -131,7 +131,7 @@ swiper .swiper-desc {
 
 .top-Nav{
 display: flex;
-padding: 8rpx 20rpx 25rpx;
+padding: 25rpx 20rpx 25rpx;
 background: #fff;
 justify-content:space-around;
 border-bottom: 1px solid #eee;
