@@ -33,8 +33,8 @@
     <view style="display:{{showallDisplay}}">
         <view class="common-list">
             <block wx:key="id" wx:for="{{postsList}}">
-                <view class="list-item has-img" index="{{index}}" id="{{item.post_id}}" bindtap="redictDetail">
-                    <view class="content-title">
+                <view class="list-item has-img" index="{{index}}" id="{{item.post_id}}" bindtap="redictDetail" style='margin:0;padding:30rpx;box-shadow:none;border-bottom:2rpx solid #eee;'>
+                    <view class="content-title" style='margin-right:200rpx;'>
                         <text>{{item.post_title}}</text>
                     </view>
                     <view class="content-date">
@@ -44,13 +44,10 @@
                         <image src="../../images/pageviews.png"></image>
                         <text class="">{{item.pageviews}}</text> 
 
-                        <image src="../../images/comments.png"></image>
-                        <text class="">{{item.comment_total}}</text>
-
                         <image src="../../images/home-like.png"></image>
                         <text class="">{{item.like_count}}</text>
                     </view>
-                    <image src="{{item.post_thumbnail_image}}" mode="aspectFill" class="cover"></image>
+                    <image src="{{item.post_thumbnail_image}}" mode="aspectFill" class="cover" style='top:24rpx;'></image>
                 </view>
             </block>
         </view>

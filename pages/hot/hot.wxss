@@ -10,7 +10,7 @@
  */
 
 .container {
-  padding: 100rpx 24rpx;
+  padding: 100rpx 0rpx;
 }
 
 .list-header {
