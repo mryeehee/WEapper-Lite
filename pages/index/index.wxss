@@ -131,10 +131,9 @@ swiper .swiper-desc {
 
 .top-Nav{
 display: flex;
-padding: 25rpx 20rpx 25rpx;
+padding: 35rpx 20rpx 25rpx;
 background: #fff;
 justify-content:space-around;
-border-bottom: 1px solid #eee;
 }
 .top-item{
 text-align: center;

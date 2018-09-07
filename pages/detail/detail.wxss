@@ -64,9 +64,8 @@
 }
 .content-article-detail {
   border-bottom: 1px solid #eee;
-  margin-top: 40rpx;
-  margin-bottom: 24px;
-  padding-bottom: 48rpx;
+  margin: 40rpx 0rpx 24rpx;
+  padding: 0rpx 20rpx 48rpx;
 }
 
 .entry-title {
