@@ -80,13 +80,14 @@
   margin: 10rpx 24rpx 60rpx;
   min-height: 200rpx;
   overflow: hidden;
-  box-shadow:2rpx 4rpx 40rpx #dadada;
+  box-shadow: 2rpx 2rpx 30rpx rgba(0, 0, 0, .2);
   border-radius: 8rpx;
 }
 
 .common-list .list-item.has-img.w-100 {
   height:auto;
 }
+
 .common-list .list-item.has-img image.cover {
   position: absolute;
   right: 24rpx;

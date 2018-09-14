@@ -40,10 +40,8 @@ Page({
     searchKey:"",
     topBarItems: [
         // id name selected 选中状态
-        { id: '1', name: '评论数', selected: true },
-        { id: '2', name: '浏览数', selected: false },        
-        { id: '3', name: '点赞数', selected: false },
-        //{ id: '4', name: '支持数', selected: false }
+        { id: '1', name: '浏览数', selected: true },        
+        { id: '2', name: '点赞数', selected: false },
     ],
     tab: '1',
 

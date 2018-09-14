@@ -5,12 +5,13 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.0",
-	"appid": "wxd9a0fcfcb2877cc0",
-	"projectname": "%E5%8F%B6%E8%B5%AB%E5%85%88%E7%94%9F",
+	"appid": "wxb6bde4eeb2d43820",
+	"projectname": "%E7%BA%B3%E5%85%B0%E5%A4%AE%E6%8E%AA",
 	"miniprogramRoot": "./",
 	"condition": {
 		"search": {

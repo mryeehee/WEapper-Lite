@@ -41,7 +41,7 @@
   border-radius: 8rpx;  
   margin-bottom: 60rpx;
   background: #fff;
-  box-shadow:2rpx 4rpx 40rpx #c2c2c2;
+  box-shadow:2rpx 2rpx 30rpx rgba(0, 0, 0, .2);
 
 }
 

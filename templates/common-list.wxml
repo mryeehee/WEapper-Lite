@@ -3,42 +3,47 @@
   <view class="common-list">
     <block wx:key="id" wx:for="{{postsList}}">
       <!-- 开始判断列表内容的第3列，样式重新排列 //大图模式 -->
-        <view class="list-item has-img w-100" index="{{index}}" id="{{item.id}}" bindtap="redictDetail">
-          
-          <view style='margin-bottom:24rpx;'>
-            <image src="{{item.post_thumbnail_image}}" mode="aspectFill" class='cover-100'></image>
-          </view>
-          <view class="content-title content-title-100">
-            <text>{{item.title.rendered}}</text>
-          </view>
+        <view bindtap="" style="position:relative">
+          <form bindsubmit="pushFormSubmit"  report-submit='true'>
+          <button style='-webkit-transform: scale(0.5);transform:scale(1);content:"";height:100%; width: 100%;border:1px solid transparent;background-color:transparent; position: absolute; top: 0; left: 0' plain="true"  formType="submit"></button>
+              <view class="list-item has-img w-100" index="{{index}}" id="{{item.id}}" bindtap="redictDetail">
+                
+                <view style='margin-bottom:24rpx;'>
+                  <image src="{{item.post_thumbnail_image}}" mode="aspectFill" class='cover-100'></image>
+                </view>
+                <view class="content-title content-title-100">
+                  <text>{{item.title.rendered}}</text>
+                </view>
 
-          <view class="content-title content-title-100" style='margin-top:0;margin-bottom:0'>
-            <text style='font-size:26rpx;color:#959595;margin:32rpx auto;'>{{item.excerpt.rendered}}</text>
-          </view>
+                <view class="content-title content-title-100" style='margin-top:0;margin-bottom:0'>
+                  <text style='font-size:26rpx;color:#959595;margin:32rpx auto;'>{{item.excerpt.rendered}}</text>
+                </view>
 
-          <!--<view class="content-date" style='margin-right:0;'>
+                <!--<view class="content-date" style='margin-right:0;'>
 
-              <view style='float:left;'>
-                  <block wx:if="{{item.category_name !=null}}">
-                          <text style='color:#ea5455'>{{item.category_name}}</text>
-                  </block>
+                    <view style='float:left;'>
+                        <block wx:if="{{item.category_name !=null}}">
+                                <text style='color:#ea5455'>{{item.category_name}}</text>
+                        </block>
+                    </view>
+
+                    <view style='float:right;'>
+                        <image src="../../images/calendar.png"></image>
+                        <text>{{item.date}}</text>
+
+                        <image src="../../images/pageviews.png"></image>
+                        <text class="">{{item.pageviews}}</text>
+
+                        <image src="../../images/comments.png"></image>
+                        <text class="">{{item.total_comments}}</text>
+
+                        <image src="../../images/home-like.png"></image>
+                        <text style='margin-right:10rpx'>{{item.like_count}}</text>
+                    </view>
+                </view>-->
+                    
               </view>
-
-              <view style='float:right;'>
-                  <image src="../../images/calendar.png"></image>
-                  <text>{{item.date}}</text>
-
-                  <image src="../../images/pageviews.png"></image>
-                  <text class="">{{item.pageviews}}</text>
-
-                  <image src="../../images/comments.png"></image>
-                  <text class="">{{item.total_comments}}</text>
-
-                  <image src="../../images/home-like.png"></image>
-                  <text style='margin-right:10rpx'>{{item.like_count}}</text>
-              </view>
-          </view>-->
-              
+          </form>
         </view>
     </block>
   </view>  

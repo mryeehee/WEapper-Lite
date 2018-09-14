@@ -87,7 +87,7 @@
 .top-bar-item {
   display: inline-block;
   background: #fff;
-  width: 33.33%;
+  width: 50%;
   color: #9babba;
   text-align: center;
   line-height: 100rpx;

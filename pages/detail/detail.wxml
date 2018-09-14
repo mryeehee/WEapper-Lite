@@ -47,11 +47,31 @@
 
 
 
-<view class="container" style='padding: 0 24rpx'>
+<view class="container" style='padding: 0 24rpx;margin-bottom:100rpx;'>
     <view class="container" style='padding:0;'>     
         <view class="content-article-detail" style="display:{{display}}">
             <view class="entry-summary">
                 <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+            </view>
+            <view style='border:2rpx solid transparent;margin:20rpx 0rpx;'>
+                <ad unit-id="adunit-8e8e6a470b6e2803" style="padding:0 2rpx;"></ad>
+            </view>
+        </view>
+
+        <!-- 上一篇 -->
+        <view wx:if="{{display}}" class="pagination">
+            <view wx:if="{{detail.previous_post_id}}" class="nav-previous">
+                <navigator url="../detail/detail?id={{detail.previous_post_id}}" open-type="redirect" hover-class="relatedNavigator" style="position:fixed;right:26rpx;bottom:340rpx;background:#fff;width:50rpx;height:50rpx;padding:15rpx;box-shadow:0rpx 2rpx 6rpx rgba(0,0,0,.2);border-radius:50%;z-index:999">
+                <image src="../../images/chevron-double-up.svg" style="height:50rpx;width:50rpx;"></image>
+                </navigator>
+            </view>
+        </view>
+        <!-- 下一篇  -->
+        <view wx:if="{{display}}" class="pagination">
+            <view wx:if="{{detail.next_post_id}}" class="nav-next">
+                <navigator url="../detail/detail?id={{detail.next_post_id}}" open-type="redirect" hover-class="relatedNavigator" style="position:fixed;right:26rpx;bottom:230rpx;background:#fff;width:50rpx;height:50rpx;padding:15rpx;box-shadow:0rpx 2rpx 6rpx rgba(0,0,0,.2);border-radius:50%;z-index:999">
+                <image src="../../images/chevron-double-down.svg" style="height:50rpx;width:50rpx;"></image>
+                </navigator>
             </view>
         </view>
 
@@ -65,41 +85,6 @@
                     <image src="{{item}}" class="gravatarLikeImg"></image>
                 </block>
             </view>
-        </view>
-
-        <view class="relatedPost common-list" style="display:{{display}}">
-            <view class="relatedTitle">相关文章</view>
-            <view class="relatedText">
-                    <block wx:key="id" wx:for="{{postList}}">
-                        <navigator url="../detail/detail?id={{item.id}}" open-type="redirect" hover-class="relatedNavigator">
-                            <view class="list-item has-img" index="{{index}}" id="{{item.id}}" bindtap="redictDetail" style='margin:0;padding:20rpx 0rpx;box-shadow:none;border-bottom:2rpx solid #eee;'>
-                                <view class="content-title" style='height:auto; margin-bottom:60rpx;margin-right:220rpx;'>
-                                    <text>{{item.title.rendered}}</text>
-                                </view>
-
-                                <view class="content-date">
-                                    <block wx:if="{{item.category_name !=null}}">
-                                            <text>{{item.category_name}}</text>
-                                    </block>
-
-                                    <!--image src="../../images/calendar.png"></image>
-                                    <text>{{item.date}}</text-->
-                                    
-                                    <image src="../../images/pageviews.png"></image>
-                                    <text class="">{{item.pageviews}}</text>
-
-                                    <!--<image src="../../images/comments.png"></image>
-                                    <text class="">{{item.total_comments}}</text>-->
-
-                                    <image src="../../images/home-like.png"></image>
-                                    <text class="">{{item.like_count}}</text>
-
-                                </view>
-                                <image src="{{item.post_thumbnail_image}}" mode="aspectFill" class="cover" style='top:24rpx;right:0rpx;'></image>
-                            </view>
-                        </navigator>                    
-                    </block>
-            </view>
         </view>        
 
         <template is="modalView" data="{{...__modalView__}}" />
@@ -109,6 +94,8 @@
         <template is="login-popup" data="{{show: isLoginPopup, userInfo: userInfo}}"></template>       
     </view>
 </view>
+
+
 <!-- 底部按钮浮动层 -->
 <view class='icon-fd'>
     <view class="iconList">
